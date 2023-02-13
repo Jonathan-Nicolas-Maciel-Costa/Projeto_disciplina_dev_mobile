@@ -4,11 +4,13 @@ const {  Screen, Navigator} = createNativeStackNavigator();
 
 import { Login } from '../screens/login'
 import { Cadastro } from '../screens/cadastro'
+import { Drawer_routes } from './drawer_nav'
 
 export function Stack_routes(){
 
     return  (
         <Navigator
+            initialRouteName="Login" 
             screenOptions={{
             headerShown: false
         }}>
@@ -19,6 +21,10 @@ export function Stack_routes(){
             <Screen
              name="Cadastro"
              component={Cadastro}
+            />
+            <Screen
+             name="Logout"
+             component={Drawer_routes}
             />
         </Navigator>
     )

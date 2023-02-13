@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, Image, TextInput, TouchableOpacity } from 'reac
 import image from '../../assets/logo.png'
 import Input_text from '../componentes/caixa_de_texto.js'
 import Input_password from  '../componentes/caixa_de_texto_password.js'
-import Botao_padrao from  '../componentes/botão_verde_padrao.js'
+import Botao_padrao from  '../componentes/botao_login'
 
 export function Login({ navigation}) {
 
@@ -25,7 +25,9 @@ export function Login({ navigation}) {
         <Input_text place_holder='Nome de Usuario ou Email' />
         <Input_password place_holder='Senha' />
 
-        <TouchableOpacity  style={styles.button} onPress={Tela_de_cadastro}>Não tenho conta ;-;</TouchableOpacity>
+        <TouchableOpacity  style={styles.button} onPress={Tela_de_cadastro}>
+          <Text>Não tenho conta ;-;</Text>
+          </TouchableOpacity>
 
         <Botao_padrao texto_botao='Login' />
     </View>

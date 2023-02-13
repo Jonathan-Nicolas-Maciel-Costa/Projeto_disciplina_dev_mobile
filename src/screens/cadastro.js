@@ -5,15 +5,18 @@ import Input_text from '../componentes/caixa_de_texto.js'
 import Input_password from  '../componentes/caixa_de_texto_password.js'
 import Botao_padrao from  '../componentes/botão_verde_padrao.js'
 
-export function Cadastro() {
+export function Cadastro( {navigation} ) {
 
-  function Tela_de_cadastro() {
+  function Home() {
+    navigation.navigate('Home')
+  }
+  function Login() {
     navigation.navigate('Login')
   }
 
   return (
     <View style={styles.container}>
-        <TouchableOpacity style={styles.img}container onPress={Tela_de_cadastro}>O usuario deveria inserir uma img aq</TouchableOpacity>
+        <TouchableOpacity style={styles.img}container onPress={Login}> <Text> O usuario deveria inserir uma img aq </Text> </TouchableOpacity>
         <View style={styles.inputs}>
 
           <Input_text place_holder='Nome de Usuario' />
@@ -24,7 +27,7 @@ export function Cadastro() {
           
         </View>
         
-        <Botao_padrao texto_botao='Cadastrar-se' />
+        <Botao_padrao onpress='Login' texto_botao='Cadastrar-se' />
     </View>
     
   );
