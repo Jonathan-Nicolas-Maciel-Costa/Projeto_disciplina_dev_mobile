@@ -21,6 +21,10 @@ export function Drawer_routes(){
     return  (
         <Drawer.Navigator  drawerContent={props => <DrawerContent {... props}/>}>
 
+            <Drawer.Screen
+             name="Home"
+             component={Home}
+            />
             <Drawer.Screen nav
              name="Dados_colecao"
              component={Dados_colecao}
@@ -40,10 +44,6 @@ export function Drawer_routes(){
             <Drawer.Screen
              name="Alterar_dados"
              component={Alterar_dados}
-            />
-            <Drawer.Screen
-             name="Home"
-             component={Home}
             />
             <Drawer.Screen
              name="DrawerContent"

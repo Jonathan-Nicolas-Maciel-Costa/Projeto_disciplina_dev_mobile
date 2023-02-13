@@ -16,7 +16,7 @@ export function Cadastro( {navigation} ) {
 
   return (
     <View style={styles.container}>
-        <TouchableOpacity style={styles.img}container onPress={Login}> <Text> O usuario deveria inserir uma img aq </Text> </TouchableOpacity>
+        <TouchableOpacity style={styles.img}container onPress={Login}> <Image style={styles.img_true} source={require('../imgs/user_icon.jpg')}/> </TouchableOpacity>
         <View style={styles.inputs}>
 
           <Input_text place_holder='Nome de Usuario' />
@@ -44,8 +44,18 @@ const styles = StyleSheet.create({
   },
   img:
   {
+    marginTop: '15%',
+    marginBottom: '15%',
     height: 150,
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
+
+  },
+  img_true:
+  {
+    width: 150,
+    height: 150,
+    borderRadius: 100,
+    resizeMode: 'stretch',
   }
 })

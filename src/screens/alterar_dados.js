@@ -27,7 +27,14 @@ export function Alterar_dados( {navigation} ) {
         
         </View>
 
-        <TouchableOpacity onPress={Senha}><Text style={styles.alt_senha}>Alterar Senha</Text></TouchableOpacity>
+        <View style={styles.senha_view}>
+
+          <View style={styles.alt_senha_view}>
+            <TouchableOpacity onPress={Senha}><Text style={styles.alt_senha}>Alterar Senha</Text></TouchableOpacity>
+          </View>
+
+        </View>
+        
         
         <Botao_padrao texto_botao='Salvar' />
     </View>
@@ -62,11 +69,20 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center'
   },
+  senha_view:
+  {
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  alt_senha_view:
+  {
+    width: 340,
+    height: 25,  
+  },
   alt_senha:
   {
     color:'red',
     textDecorationLine: 'underline',
-    marginLeft: 16,
   },
   name:
   {

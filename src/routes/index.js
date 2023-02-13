@@ -6,7 +6,7 @@ import { Drawer_routes } from './drawer_nav'
 export function Routes (){
     return (
         <NavigationContainer>
-            <Drawer_routes/>
+            <Stack_routes/>
         </NavigationContainer>
     )
 }
